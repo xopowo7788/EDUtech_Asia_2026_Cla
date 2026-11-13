@@ -9,7 +9,7 @@
   { title:"LumiTeach 상담",       src:"assets/videos/lumiteach.mp4",   poster:"assets/images/demo-04.jpg" },
 */
 const VIDEO_CONFIG = [
-  // { title:"Kinderboard 부스 시연", src:"assets/videos/kinderboard.mp4", poster:"assets/images/demo-01.jpg" },
+  { title:"EDUtech Asia 2026 현장 스케치 (1분 30초)", src:"assets/videos/edutech-asia-2026.mp4", poster:"assets/images/video-poster.jpg" },
 ];
 
 function setupClickVideos() {
