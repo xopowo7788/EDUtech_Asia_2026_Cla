@@ -1,0 +1,727 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#1c0a24">
+<title>EDUtech Asia 2026 전시회 참가 결과 보고</title>
+<style>
+:root{
+  --plum:#1c0a24; --plum2:#2c1038; --wine:#5a1550; --pink:#e3559a; --pink2:#f07bb4; --soft:#fbf3f8;
+  --ink:#1d1424; --muted:#6f6377; --line:#eadde6; --white:#fff;
+  --ok:#1f9d6b; --wait:#e3559a; --plan:#d9891a; --review:#7d7486;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","Noto Sans KR","Malgun Gothic",Arial,sans-serif;background:var(--plum);color:#fff;word-break:keep-all}
+a{color:inherit}
+img{display:block}
+.topnav{position:sticky;top:0;z-index:50;display:flex;align-items:center;gap:18px;padding:12px 18px;background:rgba(22,7,29,.9);backdrop-filter:blur(14px);border-bottom:1px solid rgba(255,255,255,.08)}
+.logo{font-weight:900;letter-spacing:.03em;white-space:nowrap}
+.logo b{color:var(--pink)}
+.navlinks{display:flex;gap:8px;overflow:auto;scrollbar-width:none;flex:1}
+.navlinks::-webkit-scrollbar{display:none}
+.navlinks a{font-size:12px;text-decoration:none;padding:8px 10px;border-radius:999px;background:rgba(255,255,255,.07);white-space:nowrap}
+.navlinks a:hover{background:rgba(255,255,255,.16)}
+.edit-btn{border:1px solid rgba(255,255,255,.18);background:transparent;color:#fff;border-radius:999px;padding:8px 12px;cursor:pointer;white-space:nowrap}
+section{min-height:88vh;display:flex;align-items:center;position:relative;overflow:hidden}
+.wrap{width:min(1180px,92vw);margin:0 auto;padding:70px 0}
+.eyebrow{font-size:13px;letter-spacing:.18em;text-transform:uppercase;color:var(--pink2);font-weight:800;margin-bottom:12px}
+h1{font-size:clamp(40px,6.4vw,84px);line-height:1;margin:0 0 20px;letter-spacing:-.04em}
+h2{font-size:clamp(30px,4.4vw,56px);line-height:1.08;margin:0 0 18px;letter-spacing:-.035em}
+h3{font-size:21px;margin:0 0 12px}
+.lead{font-size:clamp(17px,2vw,24px);line-height:1.55;color:#ead9e6;max-width:900px}
+.sub{font-size:15px;color:#c9b5c6;margin:-6px 0 18px}
+
+/* HERO */
+.hero{background:radial-gradient(circle at 78% 22%,rgba(227,85,154,.38),transparent 32%),radial-gradient(circle at 12% 90%,rgba(122,40,140,.35),transparent 30%),linear-gradient(135deg,#14061b,#2c0f3a 62%,#4a1446)}
+.hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
+.logo-chip{display:inline-flex;align-items:center;background:#fff;border-radius:18px;padding:16px 22px;margin-bottom:28px;box-shadow:0 14px 40px rgba(0,0,0,.3)}
+.logo-chip img{height:44px;width:auto}
+.hero h1 span{display:block;font-size:.5em;letter-spacing:-.02em;color:#f6c3dd;margin-top:14px}
+.hero-meta{font-size:16px;color:#e2cfdd;line-height:1.7}
+.hero-collage{position:relative;min-height:540px}
+.hero-collage img{position:absolute;object-fit:cover;border-radius:22px;border:1px solid rgba(255,255,255,.22);box-shadow:0 22px 55px rgba(0,0,0,.4)}
+.hero-collage .a{width:88%;height:66%;right:0;top:0}
+.hero-collage .b{width:46%;height:40%;left:0;bottom:0}
+.hero-collage .c{width:44%;height:36%;right:4%;bottom:2%}
+.badges{display:flex;gap:10px;flex-wrap:wrap;margin-top:26px}
+.badge{border:1px solid rgba(255,255,255,.2);background:rgba(255,255,255,.08);padding:9px 13px;border-radius:999px;font-size:13px}
+
+/* THEMES */
+.light{background:var(--soft);color:var(--ink)}
+.white{background:#fff;color:var(--ink)}
+.light .eyebrow,.white .eyebrow{color:#c13a7f}
+.light .lead,.white .lead{color:#544a5c}
+.light .sub,.white .sub{color:var(--muted)}
+.dark{background:linear-gradient(135deg,#190820,#2c0f38)}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{background:#fff;color:var(--ink);border-radius:22px;padding:24px;box-shadow:0 14px 35px rgba(70,20,60,.08)}
+.light .card{border:1px solid var(--line)}
+.white .card{background:var(--soft);box-shadow:none}
+.dark .card{background:rgba(255,255,255,.07);color:#fff;border:1px solid rgba(255,255,255,.1);box-shadow:none}
+.kpi{font-size:clamp(34px,4vw,48px);font-weight:900;color:var(--wine);letter-spacing:-.03em;line-height:1}
+.dark .kpi{color:var(--pink2)}
+.kpi-label{font-size:14px;color:var(--muted);margin-top:8px}
+.dark .kpi-label{color:#d1bfd0}
+.bullets{display:grid;gap:11px;margin-top:14px}
+.bullet{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;line-height:1.6}
+.dot{flex:0 0 8px;height:8px;border-radius:50%;background:var(--pink);margin-top:9px}
+.tag{display:inline-block;font-size:12px;font-weight:800;padding:5px 11px;border-radius:999px;background:var(--pink);color:#fff;margin-bottom:12px}
+.tag.dk{background:var(--wine)}
+.muted{color:var(--muted)}
+.dark .muted{color:#cbb8c8}
+.callout{border-radius:18px;padding:18px 20px;background:#fff0f7;border:1px solid #f6c7de;color:#4b1d3e;line-height:1.65;font-size:15.5px}
+.dark .callout{background:rgba(227,85,154,.13);border-color:rgba(227,85,154,.35);color:#fbe3ef}
+
+/* bars */
+.chart h3{font-size:17px}
+.bars{display:grid;gap:7px}
+.bar-row{display:grid;grid-template-columns:96px 1fr 40px;gap:10px;align-items:center;font-size:13.5px}
+.bar-row .lbl{text-align:right;color:var(--muted);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.bar-track{height:14px;background:#f3e8ef;border-radius:7px;overflow:hidden}
+.bar-fill{height:100%;background:linear-gradient(90deg,var(--wine),var(--pink));border-radius:7px;width:0;transition:width 1s ease}
+.bar-row.dim .bar-fill{background:#cbbcc7}
+.bar-row .val{font-weight:800;font-variant-numeric:tabular-nums}
+.vbars{display:flex;gap:26px;align-items:flex-end;height:230px;padding:10px 6px 0;border-bottom:2px solid var(--line)}
+.vbar{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:flex-end;height:100%}
+.vbar .col{width:100%;max-width:90px;border-radius:12px 12px 0 0;background:linear-gradient(180deg,var(--pink),var(--wine));height:0;transition:height 1s ease}
+.vbar .n{font-weight:900;font-size:20px;margin-bottom:6px;color:var(--wine)}
+.vlabels{display:flex;gap:26px;padding:8px 6px 0}
+.vlabels div{flex:1;text-align:center;font-size:13px;color:var(--muted)}
+
+/* tables */
+.table-wrap{overflow-x:auto;border-radius:18px;border:1px solid var(--line);background:#fff;margin-top:22px}
+table{width:100%;border-collapse:collapse;font-size:14px;line-height:1.55;color:var(--ink);min-width:760px}
+th{background:var(--plum2);color:#fff;text-align:left;padding:13px 14px;font-weight:800;white-space:nowrap}
+td{padding:13px 14px;border-top:1px solid var(--line);vertical-align:top}
+td:first-child{font-weight:800;white-space:nowrap}
+tr.hl td{background:#fff3f9}
+.kv{min-width:0}
+.kv td:first-child{width:120px;color:var(--wine)}
+.status-table{min-width:0;font-size:14px}
+.status-table td:last-child{width:96px;text-align:center}
+.st{display:inline-block;font-size:12px;font-weight:800;padding:4px 10px;border-radius:999px;color:#fff;white-space:nowrap}
+.st.ok{background:var(--ok)}.st.wait{background:var(--wait)}.st.plan{background:var(--plan)}.st.review{background:var(--review)}
+
+/* photos */
+.photo-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:24px}
+.photo-grid.four{grid-template-columns:repeat(4,1fr)}
+.photo-grid.five{grid-template-columns:repeat(5,1fr)}
+.photo-grid img{width:100%;aspect-ratio:4/5;object-fit:cover;border-radius:18px;background:#eadfe7;cursor:zoom-in}
+.photo-grid img.land{aspect-ratio:16/10}
+.photo-grid img.contain{object-fit:contain;background:#fff;padding:8px}
+figure{margin:0}
+figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+.dark figcaption{color:#cbb8c8}
+.feature-img{width:100%;border-radius:22px;object-fit:cover;cursor:zoom-in}
+.logo-strip{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-top:16px}
+.logo-strip img{height:30px;width:auto;background:#fff;border-radius:8px;padding:5px 8px}
+.steps{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:12px}
+.step{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 12px;font-size:13.5px;color:var(--ink)}
+.dark .step{background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:#fff}
+.step b{display:block;color:var(--pink);font-size:12px}
+.quote{font-size:clamp(24px,3.4vw,44px);font-weight:900;line-height:1.2;letter-spacing:-.03em}
+.quote small{display:block;font-size:16px;font-weight:600;color:#e7bcd5;margin-top:12px;letter-spacing:0}
+.num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--pink);color:#fff;font-weight:900;margin-bottom:12px}
+
+/* meetings */
+.meeting{display:grid;grid-template-columns:1.25fr .75fr;gap:28px;align-items:start;margin-top:10px}
+.meeting+.meeting{margin-top:56px;padding-top:56px;border-top:1px solid var(--line)}
+.meeting .photo{width:100%;border-radius:22px;object-fit:cover;aspect-ratio:3/4;cursor:zoom-in}
+.mt-head{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap;margin-bottom:6px}
+.mt-head .no{font-weight:900;color:var(--pink);font-size:15px}
+.mt-head h3{font-size:26px;margin:0}
+.dl{display:grid;gap:10px;margin:16px 0}
+.dl div{display:grid;grid-template-columns:96px 1fr;gap:12px;font-size:15px;line-height:1.6}
+.dl b{color:var(--wine)}
+
+/* sketch */
+.sketch-group h3{display:flex;align-items:center;gap:10px;font-size:18px;margin-top:30px}
+.sketch-group h3:before{content:"";width:5px;height:20px;background:var(--pink);border-radius:3px}
+
+/* videos */
+.video-section{background:#0f0514}
+.video-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:26px}
+.video-card{background:#1d0f24;border:1px solid rgba(255,255,255,.09);border-radius:18px;overflow:hidden}
+.video-card video{width:100%;aspect-ratio:9/16;display:block;background:#000;object-fit:cover}
+.video-meta{padding:13px 14px;font-size:14px}
+.empty-video{grid-column:1/-1;padding:32px;border:1px dashed rgba(255,255,255,.22);border-radius:18px;color:#cdb9ca;text-align:center;line-height:1.7}
+
+.thanks{background:radial-gradient(circle at 70% 30%,rgba(227,85,154,.3),transparent 35%),linear-gradient(135deg,#14061b,#2c0f3a)}
+.footer{padding:40px 0;background:#0b0310;color:#a48fa2}
+.footer .wrap{padding:0}
+.controls{position:fixed;right:18px;bottom:18px;z-index:40;display:flex;gap:8px}
+.ctrl{border:0;background:rgba(22,7,29,.85);color:#fff;width:44px;height:44px;border-radius:50%;font-size:18px;cursor:pointer;backdrop-filter:blur(10px);box-shadow:0 6px 22px rgba(0,0,0,.25)}
+.editor{position:fixed;right:16px;top:65px;width:min(420px,calc(100vw - 32px));max-height:75vh;overflow:auto;background:#fff;color:#1d1424;border-radius:18px;padding:18px;z-index:60;box-shadow:0 30px 80px rgba(0,0,0,.35);display:none}
+.editor.open{display:block}
+.editor h3{margin-bottom:4px}
+.editor p{font-size:13px;color:#6f6377;line-height:1.5}
+.editor label{display:block;font-size:12px;font-weight:800;margin:13px 0 5px}
+.editor input{width:100%;padding:11px;border:1px solid #e3d6df;border-radius:10px;font-size:14px}
+.editor .row{display:flex;gap:8px;margin-top:10px}
+.editor button{border:0;border-radius:10px;padding:10px 12px;cursor:pointer;font-weight:800}
+.primary{background:var(--wine);color:#fff}
+.secondary{background:#f5ecf2;color:#4b1d3e}
+.temp-list{display:grid;gap:10px;margin-top:12px}
+.temp-item{background:#faf5f8;border-radius:12px;padding:10px;font-size:12px}
+.lightbox{position:fixed;inset:0;background:rgba(10,3,14,.92);z-index:80;display:none;align-items:center;justify-content:center;padding:24px;cursor:zoom-out}
+.lightbox.open{display:flex}
+.lightbox img{max-width:100%;max-height:100%;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+@media(max-width:900px){
+  section{min-height:auto}.wrap{padding:56px 0}
+  .hero-grid,.grid2,.meeting{grid-template-columns:1fr}
+  .hero-collage{min-height:420px}
+  .grid3{grid-template-columns:1fr}.grid4{grid-template-columns:1fr 1fr}
+  .photo-grid,.photo-grid.four,.photo-grid.five{grid-template-columns:repeat(2,1fr)}
+  .video-grid{grid-template-columns:1fr 1fr}.logo{display:none}.topnav{gap:8px}
+  .meeting .photo{aspect-ratio:4/3}
+}
+@media(max-width:520px){
+  .hero-collage{min-height:330px}.logo-chip img{height:32px}
+  .video-grid{grid-template-columns:1fr}.steps{grid-template-columns:1fr}
+  .bar-row{grid-template-columns:78px 1fr 34px;font-size:12.5px}
+  .vbars,.vlabels{gap:12px}
+}
+</style>
+</head>
+<body>
+<nav class="topnav">
+  <div class="logo">EDU<b>tech</b> ASIA 2026</div>
+  <div class="navlinks">
+    <a href="#overview">전시회 개요</a><a href="#leads">리드 분석</a><a href="#next">후속 계획</a><a href="#booth">현장 운영</a>
+    <a href="#takeaways">Key Takeaways</a><a href="#cases">업체 사례</a><a href="#entry">학교 진입 모델</a><a href="#lms">동남아 LMS</a>
+    <a href="#meetings">주요 미팅</a><a href="#sketch">현장 스케치</a><a href="#videos">Videos</a>
+  </div>
+  <button class="edit-btn" id="editToggle" type="button">영상 관리</button>
+</nav>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="wrap hero-grid">
+    <div>
+      <div class="logo-chip"><img src="assets/images/edutech-logo.png" alt="EDUtech Asia 로고"></div>
+      <div class="eyebrow">Global Business Division · 2026.11</div>
+      <h1>EDUtech Asia 2026<span>전시회 참가 결과 보고</span></h1>
+      <p class="hero-meta">싱가포르 Sands Expo · 2026. 11. 4(수) – 5(목)<br>아이스크림미디어 해외사업실 · 2026. 11. 13</p>
+      <div class="badges"><span class="badge">리드 572건</span><span class="badge">24개국</span><span class="badge">Kinderboard · LumiTeach · ART BONBON · TRUETRUE</span><span class="badge">싱가포르 미팅 4건</span></div>
+    </div>
+    <div class="hero-collage">
+      <img class="a" src="assets/images/hero-edutech.jpg" alt="EDUtech Asia 2026 현장 사인">
+      <img class="b" src="assets/images/booth-design.jpg" alt="i-Scream media 통합 브랜드 부스">
+      <img class="c" src="assets/images/booth-02.jpg" alt="부스 전경">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 01 OVERVIEW ============ -->
+<section class="light" id="overview">
+  <div class="wrap">
+    <div class="eyebrow">01 · Exhibition Overview</div>
+    <h2>전시회 개요 및 성과</h2>
+    <p class="sub">싱가포르 Sands Expo · 2026. 11. 4(수) ~ 5(목)</p>
+    <div class="grid4">
+      <div class="card"><div class="kpi" data-count="572">572</div><div class="kpi-label">고유 연락처</div></div>
+      <div class="card"><div class="kpi" data-count="414">414</div><div class="kpi-label">기관 수</div></div>
+      <div class="card"><div class="kpi" data-count="24">24</div><div class="kpi-label">국가 (해외)</div></div>
+      <div class="card"><div class="kpi" data-count="94" data-suffix="%">94%</div><div class="kpi-label">배지 스캔 비중</div></div>
+    </div>
+    <div class="grid2" style="margin-top:28px">
+      <div class="table-wrap" style="margin-top:0">
+        <table class="kv">
+          <tr><td>전시회명</td><td>EDUtech Asia 2026</td></tr>
+          <tr><td>규모</td><td>아시아 및 인근 국가 교육 관계자 약 10,000명 / Google · Lenovo · Samsung · Kahoot 등 글로벌 EdTech 기업 참가</td></tr>
+          <tr><td>참가 서비스</td><td>킨더보드 · 루미티치 · 아트봉봉 · 뚜루뚜루 (4종)</td></tr>
+          <tr><td>운영 인력</td><td>총 7명 (미디어 5명, 아트 2명)</td></tr>
+          <tr><td>현장 이벤트</td><td>Pick Your Favorite 투표, Passport Challenge(스탬프), 나눔용 굿즈 3종</td></tr>
+        </table>
+      </div>
+      <div class="card chart">
+        <h3>일자별 리드 수집 (건)</h3>
+        <div class="vbars" id="dailyBars"></div>
+        <div class="vlabels" id="dailyLabels"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LEADS ============ -->
+<section class="white" id="leads">
+  <div class="wrap">
+    <div class="eyebrow">01 · Lead Analysis</div>
+    <h2>동남아 88% 집중,<br>의사결정권자 4명 중 1명</h2>
+    <p class="sub">해외 리드 536건 기준 · 24개국</p>
+    <div class="grid3">
+      <div class="card chart"><h3>국가별 리드 (건)</h3><div class="bars" data-chart="country"></div></div>
+      <div class="card chart"><h3>직무별 리드 (건)</h3><div class="bars" data-chart="job"></div></div>
+      <div class="card chart"><h3>산업(기관 유형)별 리드 (건)</h3><div class="bars" data-chart="industry"></div></div>
+    </div>
+    <div class="grid4" style="margin-top:22px">
+      <div class="callout"><b>동남아 집중 (88%)</b><br>싱가포르 243 · 말레이시아 124건이 68%. 싱가포르는 에듀테크·유통·정부 102건(42%), 말레이시아는 K-12·대학 81건(65%) 중심</div>
+      <div class="callout"><b>확장 후보 시장</b><br>인도네시아 43건(K-12 학교 24건) · 필리핀 39 · 인도 17 · 베트남 13건. 인도네시아는 학교 대상 직접 접근 유효</div>
+      <div class="callout"><b>의사결정권자 141명 (26%)</b><br>대표·창업자 33 · 경영진 22 · CTO/CIO 16 · 교육·학사 책임자 54 등</div>
+      <div class="callout"><b>K-12 132건 · 정부·유아 79건</b><br>K-12 공립 69 · 사립 37 · 국제 22 등. 정부·공공 53건(MOE · KEMAS 등), 유아교육 26건은 KinderVerse 핵심 타깃</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEXT ============ -->
+<section class="dark" id="next">
+  <div class="wrap">
+    <div class="eyebrow">01 · Insight &amp; Follow-up</div>
+    <h2>시사점 및 후속 계획</h2>
+    <p class="sub">2일간 리드 수집 결과 종합 및 후속 운영 계획</p>
+    <div class="grid2">
+      <div class="card">
+        <h3>종합 시사점</h3>
+        <div class="bullets">
+          <div class="bullet"><span class="dot"></span><span><b>규모와 지역</b> — 현장 2일간 549건(일평균 약 275건), 사전 등록 포함 총 572건 확보. 해외 536건 · 24개국이나 싱가포르·말레이시아 68%, 동남아 88%로 지역 편중이 큼</span></div>
+          <div class="bullet"><span class="dot"></span><span><b>리드의 질</b> — 경영진·교육 책임자 112명(21%), 학교·유아교육 158건(29%), 파트너 후보(에듀테크·유통) 127건(24%)이 후속 우선 대상</span></div>
+          <div class="bullet"><span class="dot"></span><span><b>우선 접촉 대상</b> — 의사결정 직군 141명 및 파트너 후보 127건 우선 접촉. 인도네시아·필리핀 등 확장 후보 시장은 학교 중심 접근</span></div>
+        </div>
+      </div>
+      <div class="card">
+        <h3>후속 계획</h3>
+        <span class="tag">11월 · 진행 중</span>
+        <div class="bullets" style="margin-top:0;margin-bottom:18px">
+          <div class="bullet"><span class="dot"></span><span>행사 리드 HubSpot 일괄 등록 (행사 종료 후 3영업일 내 완료)</span></div>
+          <div class="bullet"><span class="dot"></span><span>Thank-you 메일 발송 (행사 후 5일 내 완료)</span></div>
+        </div>
+        <span class="tag dk">12월 · 2차 보고</span>
+        <div class="bullets" style="margin-top:0;margin-bottom:18px">
+          <div class="bullet"><span class="dot"></span><span>메일 회신율 · SQL 전환율 측정 (행사 후 30일 시점)</span></div>
+          <div class="bullet"><span class="dot"></span><span>직무·산업 미기재 보완 및 리드 등급 부여</span></div>
+        </div>
+        <span class="tag">우선 영업 대상</span>
+        <div class="bullets" style="margin-top:0">
+          <div class="bullet"><span class="dot"></span><span>의사결정 직군 141명, 파트너 후보 127건 우선 접촉</span></div>
+          <div class="bullet"><span class="dot"></span><span>제품별로 Core 고객 행사 2주 내 follow up</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ BOOTH ============ -->
+<section class="light" id="booth">
+  <div class="wrap">
+    <div class="eyebrow">01 · Booth Operation</div>
+    <h2>부스 디자인 · 홍보물 · 기념품</h2>
+    <p class="lead">i-Scream media 통합 브랜드 부스와 서비스별 홍보 배너로 인지도를 확보하고, 참여 수준별 기념품으로 리드 수집 및 핵심 고객 관리.</p>
+    <div class="photo-grid five" style="grid-template-columns:2fr 1fr 1fr 1fr 1fr">
+      <figure><img style="aspect-ratio:6/5" src="assets/images/booth-design.jpg" alt="부스 디자인"><figcaption>부스 디자인 (통합 브랜드 부스)</figcaption></figure>
+      <figure><img class="contain" style="aspect-ratio:3/5" src="assets/images/banner-partners.jpg" alt="글로벌 파트너 모집 배너"><figcaption>글로벌 파트너 모집</figcaption></figure>
+      <figure><img class="contain" style="aspect-ratio:3/5" src="assets/images/banner-artbonbon.jpg" alt="ART BONBON 배너"><figcaption>ART BONBON</figcaption></figure>
+      <figure><img class="contain" style="aspect-ratio:3/5" src="assets/images/banner-kinderboard.jpg" alt="Kinderboard 배너"><figcaption>Kinderboard</figcaption></figure>
+      <figure><img class="contain" style="aspect-ratio:3/5" src="assets/images/banner-lumiteach.jpg" alt="LumiTeach 배너"><figcaption>LumiTeach</figcaption></figure>
+    </div>
+    <h3 style="margin-top:40px">참여 수준별 기념품 증정 기준</h3>
+    <div class="grid3">
+      <div class="card"><img src="assets/images/goods-basket.jpg" alt="요술 바구니" style="width:100%;height:150px;object-fit:contain;margin-bottom:14px"><span class="tag">참여형</span><h3>요술 바구니</h3><p class="muted" style="margin:0;line-height:1.6">투표판 스티커 부착 및 공식 LinkedIn 팔로우 고객 대상 증정</p></div>
+      <div class="card"><img src="assets/images/goods-fan.jpg" alt="전통 부채" style="width:100%;height:150px;object-fit:contain;margin-bottom:14px"><span class="tag">체험형</span><h3>전통 부채</h3><p class="muted" style="margin:0;line-height:1.6">부스 방문 후 서비스 시연 참여 또는 투표판 이벤트 참가 고객 대상 증정</p></div>
+      <div class="card"><img src="assets/images/goods-adapter.jpg" alt="여행용 어댑터" style="width:100%;height:150px;object-fit:contain;margin-bottom:14px"><span class="tag dk">핵심 고객</span><h3>여행용 어댑터</h3><p class="muted" style="margin:0;line-height:1.6">주요 잠재 고객으로 판단된 방문객 한정, 서비스별 10개씩 증정</p></div>
+    </div>
+    <h3 style="margin-top:40px">서비스별 Linktree QR</h3>
+    <p class="muted" style="margin-top:-4px">부스 QR 하나로 서비스별 소개 페이지에 연결하여 방문객의 사후 탐색 및 문의 동선 확보</p>
+    <div class="photo-grid four">
+      <figure><img class="contain" style="aspect-ratio:9/16" src="assets/images/linktree-main.jpg" alt="i-Scream media Linktree"><figcaption>i-Scream media</figcaption></figure>
+      <figure><img class="contain" style="aspect-ratio:9/16" src="assets/images/linktree-kinderboard.jpg" alt="Kinderboard Linktree"><figcaption>Kinderboard</figcaption></figure>
+      <figure><img class="contain" style="aspect-ratio:9/16" src="assets/images/linktree-lumiteach.jpg" alt="LumiTeach Linktree"><figcaption>LumiTeach</figcaption></figure>
+      <figure><img class="contain" style="aspect-ratio:9/16" src="assets/images/linktree-artbonbon.jpg" alt="ART BONBON Linktree"><figcaption>ART BONBON</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 02 TAKEAWAYS ============ -->
+<section class="dark" id="takeaways">
+  <div class="wrap">
+    <div class="eyebrow">02 · 3 Key Takeaways</div>
+    <h2>현장 업체 참관 인사이트</h2>
+    <div class="card" style="margin:10px 0 24px;text-align:center"><div class="quote">AI가 인간을 대체하는 것이 아니라<br>인간의 잠재력을 확장하는 교육<small>“Human-centred education, powered by AI and tech” — EDUtech Asia 2026 슬로건</small></div></div>
+    <div class="grid3">
+      <div class="card">
+        <div class="num">1</div><div class="muted">어떻게 참여시키는가?</div>
+        <h3 style="margin-top:6px">AI Learning Journey 기반 체험</h3>
+        <div class="bullets"><div class="bullet"><span class="dot"></span><span>학습 대상자(교사) 맞춤형 AI 기능 실습 온보딩 제공</span></div><div class="bullet"><span class="dot"></span><span>교사 직접 체험 → Demo Slam(5분 수업 발표) 연계로 경험 확산</span></div></div>
+        <div class="logo-strip"><img src="assets/images/logo-google.png" alt="Google for Education"></div>
+      </div>
+      <div class="card">
+        <div class="num">2</div><div class="muted">무엇을 가르칠 것인가?</div>
+        <h3 style="margin-top:6px">Human-AI Literacy</h3>
+        <div class="bullets"><div class="bullet"><span class="dot"></span><span>AI 답안의 단순 복제를 지양하고 비판적 검증 능력을 키우는 교육 플랫폼</span></div><div class="bullet"><span class="dot"></span><span>Think → Create → Reflect 3단계 루프 기반 학습자 주도 프레임워크</span></div></div>
+        <div class="logo-strip"><img src="assets/images/logo-lexgo.png" alt="LEXGO Academy"></div>
+      </div>
+      <div class="card">
+        <div class="num">3</div><div class="muted">어떻게 현장에 정착시키는가?</div>
+        <h3 style="margin-top:6px">교사 경험 설계</h3>
+        <div class="bullets"><div class="bullet"><span class="dot"></span><span>교사의 기술적 거부감을 줄이고 현장 정착을 돕는 4단계 프레임워크</span></div></div>
+        <div class="steps"><div class="step"><b>1단계</b>최저 허들 체험</div><div class="step"><b>2단계</b>미션 &amp; 배지 부여</div><div class="step"><b>3단계</b>AI 앰배서더 격상</div><div class="step"><b>4단계</b>1:1 트레이닝 정례화</div></div>
+        <div class="logo-strip"><img src="assets/images/logo-wayground.png" alt="Wayground"><img src="assets/images/logo-toddle.png" alt="Toddle"><img src="assets/images/logo-magicschool.png" alt="MagicSchool"><img src="assets/images/logo-codnut.png" alt="Codnut"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CASES ============ -->
+<section class="light" id="cases">
+  <div class="wrap">
+    <div class="eyebrow">02 · Case 1 · Google for Education</div>
+    <h2>AI Learning Journey 기반<br>체험형 교사 온보딩</h2>
+    <p class="lead">K12 / Higher Education / 교사연수로 구획된 9개 페르소나별로 Gemini를 체험하는 시나리오형 부스 운영.</p>
+    <p class="muted" style="line-height:1.6">디지털 초심자 업무 자동화, 차시 계획, 지문 난이도 조절, 행정·학급 관리 문서화, 1:1 토론 수업 시뮬레이션, 평가·피드백 자동 구성, 5분 Gemini 수업 아이디어 등</p>
+    <div class="grid2" style="margin-top:22px">
+      <div class="photo-grid" style="grid-template-columns:1fr 1fr;margin-top:0">
+        <img src="assets/images/google-1.jpg" alt="Google for Education Gemini 체험 부스"><img src="assets/images/google-2.jpg" alt="AI Learning Journey 카드">
+      </div>
+      <div class="card">
+        <h3>Gemini와 교육 정책</h3>
+        <div class="bullets" style="margin-bottom:18px"><div class="bullet"><span class="dot"></span><span>Workspace for Education 내 Gemini를 교육자·학생에게 추가 비용 없이 확대 제공</span></div><div class="bullet"><span class="dot"></span><span>교육 데이터는 모델 학습에 사용하지 않는다고 발표</span></div></div>
+        <h3>Classroom 신규 AI 기능</h3>
+        <div class="bullets" style="margin-bottom:18px"><div class="bullet"><span class="dot"></span><span>교사가 직접 AI 에이전트를 만들어 업무 자동화·공유 (Workspace Studio)</span></div><div class="bullet"><span class="dot"></span><span>Gemini 기반 SAT 전체 모의고사 제공</span></div><div class="bullet"><span class="dot"></span><span>Classroom 네이티브 오디오·영상 피드백, 국제 성취기준 추적 파일럿 국가 확대</span></div><div class="bullet"><span class="dot"></span><span>Khan Academy Writing Coach에 Gemini 공급</span></div></div>
+        <h3>교사 연수</h3>
+        <div class="bullets"><div class="bullet"><span class="dot"></span><span>미국 교사 600만 명 대상 무료 AI 연수 발표</span></div><div class="bullet"><span class="dot"></span><span>현장에서는 Demo Slam · AI Educator Series 기반 연수 → 인증 → 앰배서더 구조 강조</span></div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:80px">
+      <div class="eyebrow">02 · Case 2 · LEXGO Academy</div>
+      <h2>Human AI-Literacy 방법론<br>기반 수업 도구</h2>
+      <p class="lead">홍콩 기반 에듀테크 스타트업으로, Google Gemini AI 인프라를 바탕으로 ‘AI 리터러시’ 교육 솔루션 제공.</p>
+      <div class="grid2" style="margin-top:22px">
+        <div class="card">
+          <h3>수업 흐름</h3>
+          <div class="steps" style="grid-template-columns:repeat(3,1fr);margin-bottom:14px"><div class="step"><b>THINK</b>내 아이디어 먼저</div><div class="step"><b>CREATE</b>AI는 실행만 보조</div><div class="step"><b>REFLECT</b>처음 의도와 비교</div></div>
+          <div class="bullets" style="margin-bottom:18px"><div class="bullet"><span class="dot"></span><span>AI에 명령하기 전 학생이 먼저 스스로 생각하게 만드는 프레임워크</span></div><div class="bullet"><span class="dot"></span><span>교사는 주제·평가기준을 정하고 AI 점수와 코멘트를 보완·수정하는 ‘퍼실리테이터’ 역할</span></div></div>
+          <h3>제품 구성</h3>
+          <div class="bullets"><div class="bullet"><span class="dot"></span><span><b>LexBuild</b> — 학생이 만든 실물(레고·블록·점토 등)을 AI 멀티모달로 분석해 형태·구조적 안정성·색상 배치를 질의(Questioning)하며 아이디어 발전을 유도</span></div><div class="bullet"><span class="dot"></span><span><b>LexStory</b> — 학생이 GenAI로 영상 스토리텔링, 교사는 창작 과정을 추적·평가</span></div></div>
+        </div>
+        <div class="photo-grid" style="grid-template-columns:1fr 1fr;margin-top:0">
+          <img src="assets/images/lexgo-1.jpg" alt="LEXGO Academy 부스"><img src="assets/images/lexgo-2.jpg" alt="LEXGO Academy 소개 패널">
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top:80px">
+      <div class="eyebrow">02 · Case 3 · Teacher Experience Design</div>
+      <h2>주요 4개 브랜드의 시장 진입 방식 및<br>교사 경험 설계 기반 온보딩</h2>
+      <p class="lead">교사가 AI·디지털 도구를 처음 접할 때의 부담감과 기술적 장벽을 해소해 즉시 수업에 적용하도록 설계된 온보딩 사례 분석.</p>
+      <div class="table-wrap">
+        <table>
+          <tr><th>회사</th><th>서비스 및 솔루션</th><th>GTM</th><th>교사 경험 설계 기반 온보딩 구현 방식</th></tr>
+          <tr><td>MagicSchool AI</td><td>교사 전용 80여 가지 AI 도구(수업안 작성, 루브릭 생성, 학부모 편지 작성 등) 제공</td><td>개별 교사 무료 개방 → 해당 학교나 교육청 단위 계약으로 전환</td><td>가입 직후 30초 만에 수업안을 만드는 최저 허들 체험을 제공하고, 연수용 자료집 배포를 통한 ‘AI Pioneer’ 배지 제도로 교사를 학내 AI 리더로 키워 교육청 단체 계약을 도출</td></tr>
+          <tr><td>Toddle</td><td>IB 교육과정 특화 LMS</td><td>학교장들 계약을 통해 교사 사용할 수 있도록 시장 진입</td><td>전문 컨설턴트 1:1 밀착 연수 필수화 및 복잡한 IB 단원계획 자동화</td></tr>
+          <tr><td>Wayground</td><td>AI 퀴즈 및 서술형 AI 평가 (구 Quizizz)</td><td>ESSA (미국 학술적 연구효과 검증) 근거 확보를 통해 마케팅 및 시장 진입</td><td>기존 교안의 실시간 퀴즈/서술형 AI 채점 자동 변환과 행정 보고서 자동화로 즉각적인 수업 주도감 제공</td></tr>
+          <tr class="hl"><td>Codnut</td><td><b style="color:#c13a7f">[자사 플랫폼과 유사도 높음]</b> AI 수업 생성, 기존 자료 혹은 한 줄 설명 입력으로 Interactive 수업안 변환</td><td>싱가포르 법인 설립 후 아시아 시장 공략, 교과서 발행사 및 교육청 레퍼런스 확보하여 신뢰도 확보</td><td>기존 파일(PPT/PDF) 업로드 3분 만에 인터랙티브 수업안 변환 및 교육청·발행사 연동 직무 연수로 자연스러운 도입 유도</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ENTRY MODEL ============ -->
+<section class="white" id="entry">
+  <div class="wrap">
+    <div class="eyebrow">02 · School Entry Model</div>
+    <h2>학교 진입 방식별 솔루션 도입 모델<br>보드 탑재 · 기기 탑재 · 기관 라이선스</h2>
+    <p class="lead">하드웨어·소프트웨어 연계 형태별로 3개 업체의 판매 방식, 콘텐츠 보유, AI 활용, 교사 연수 체계를 비교.</p>
+    <div class="photo-grid">
+      <figure><img class="land" src="assets/images/classin.jpg" alt="ClassIn 부스"><figcaption>ClassIn · 보드 탑재</figcaption></figure>
+      <figure><img class="land" src="assets/images/samsung-knox.jpg" alt="Samsung Knox 부스"><figcaption>Samsung Knox · 기기 탑재</figcaption></figure>
+      <figure><img class="land" src="assets/images/kahoot.jpg" alt="Kahoot! 부스"><figcaption>Kahoot! · 기관 라이선스</figcaption></figure>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <tr><th></th><th>ClassIn</th><th>Samsung Knox</th><th>Kahoot!</th></tr>
+        <tr><td>판매 형태 및 제품</td><td>수업 플랫폼 + 스마트 보드(ClassInX) 세트, 추적 카메라 및 보드 내 플랫폼 탑재</td><td>삼성 Galaxy 태블릿·PC 등 자사 기기에 Knox Classroom 탑재</td><td>퀴즈·실시간 형성평가, 교사 요금제 + 학교·교육청 라이선스 판매</td></tr>
+        <tr><td>콘텐츠 · LMS</td><td>화상수업·LMS·자료 변환 도구를 직접 보유</td><td>직접 보유하지 않음, Geniebook 등 파트너에 위임</td><td>퀴즈 중심 형성평가</td></tr>
+        <tr><td>AI 활용</td><td>화상수업 중 AI 실시간 번역 기능 탑재</td><td>관리 도구엔 AI 없음, 기기의 Galaxy AI(노트 요약·통역·Gemini 키)를 학습에 활용</td><td>URL·주제·PDF → AI 퀴즈 생성, 모의시험 및 단계별 풀이</td></tr>
+        <tr><td>교사 연수</td><td>연수 패키지 필수 (2시간 × 2~3회)</td><td>싱가포르 ‘Gen-AI for Educators’ 워크숍 (최대 2,000명)</td><td>기관 구매 후 교사 배포, 국내는 파트너사(클래섬 등)가 1~4시간 맞춤 연수 대행</td></tr>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LMS ============ -->
+<section class="light" id="lms">
+  <div class="wrap">
+    <div class="eyebrow">02 · Southeast Asia LMS</div>
+    <h2>동남아 주요 LMS 및 EdTech 업체 분석</h2>
+    <p class="lead">싱가포르 및 동남아 주요 교육기관에서 활용되는 LMS·에듀테크 솔루션의 AI 기능 도입 양상 분석.</p>
+    <div class="grid3" style="margin-top:22px">
+      <div class="card">
+        <img src="assets/images/d2l.jpg" alt="D2L 부스" class="feature-img" style="height:200px;margin-bottom:16px">
+        <h3>D2L (Brightspace)</h3>
+        <div class="dl" style="margin:0"><div><b>서비스</b><span>싱가포르 대학 주력 LMS, Lumi로 학습목표-과제 정렬 및 보충자료 추천</span></div><div><b>신규 기능</b><span>Lumi Remix(콘텐츠 개작·다국어 자동 번역), Lumi Learner Mode(학생 맞춤형 AI 튜터링)</span></div><div><b>특징</b><span>Gemini 등 대형 LLM 연동 AI 튜터링과 콘텐츠 자동 개작으로 학습자 맞춤 기능을 빠르게 확장</span></div></div>
+      </div>
+      <div class="card">
+        <img src="assets/images/meritto.jpg" alt="Meritto 부스" class="feature-img" style="height:200px;margin-bottom:16px">
+        <h3>Meritto</h3>
+        <div class="dl" style="margin:0"><div><b>영역</b><span>인도 중심 입학·모집 CRM</span></div><div><b>서비스</b><span>지원서 작성, 결제 관리, WhatsApp 상담을 단일 화면에서 처리, 메시지 자동 번역</span></div><div><b>신규 기능</b><span>학생별 다음 행동 추천, 음성 에이전트 응대, K-12 AI 플레이북 배포</span></div><div><b>특징</b><span>인도 NoPaperForms Solutions 제품, 1,000+ 기관 보유</span></div></div>
+      </div>
+      <div class="card">
+        <h3>Jamf</h3>
+        <div class="dl" style="margin:0"><div><b>영역</b><span>Apple 기기 관리 및 보안</span></div><div><b>서비스</b><span>Apple School Manager(ASM) 연동으로 앱·설정 일괄 배포, 7.6만+ 기관 보유</span></div><div><b>특징</b><span>AI 도구 도입과 함께 교내 기기 통제 및 학생 보호(웹 필터링)를 위한 MDM 동반 도입 수요 지속 증가</span></div></div>
+      </div>
+    </div>
+
+    <div style="margin-top:80px">
+      <h2>주요 LMS·플랫폼의<br>AI 과금 및 데이터 정책 비교</h2>
+      <p class="lead">Canvas·D2L은 AI를 상위 요금제로 분리 과금하고, Moodle은 기관이 AI 모델을 직접 선택하는 구조.</p>
+      <div class="callout" style="margin-top:18px">공통 메시지: <b>‘학생 데이터는 기관 밖으로 나가지 않는다’</b> — 데이터 통제가 기관 구매의 핵심 조건으로 부상</div>
+      <div class="table-wrap">
+        <table>
+          <tr><th>업체</th><th>현장 시연 · 신규 기능</th><th>AI 과금 구조</th><th>데이터 · 모델 정책</th><th>자사 시사점</th></tr>
+          <tr><td>Canvas<br><span class="muted" style="font-weight:400">Instructure</span></td><td>IgniteAI Agent로 퀴즈 생성·코스 데이터 질의 시연</td><td>2026.4 티어 개편: Core(기본 AI) / Plus(교수·피드백 AI) / Next(Agent). 채점 보조·Agent는 9/30까지 무료 후 상위 티어</td><td>외부 모델 학습 미사용, 기관·학과·과목 단위 옵트인. ‘AI Nutrition Facts’ 라벨로 모델·데이터 접근 방식 공개</td><td>AI 고지 라벨이 기관 구매 체크리스트 → 해외 제품용 AI 고지문 준비</td></tr>
+          <tr><td>D2L<br><span class="muted" style="font-weight:400">Brightspace</span></td><td>Lumi로 학습목표-과제 정렬, 보충자료 추천. 2026.7 Lumi Remix·Learner Mode 발표</td><td>상위 기능은 Lumi Pro 별도 티어 (단가 견적, 추가 확인 필요)</td><td>부스 설명상 Gemini 기반</td><td>콘텐츠 개작이 LMS에 내장 → LTI·Common Cartridge 등 표준 포맷 공급 검토</td></tr>
+          <tr><td>Moodle</td><td>K-12~고등교육용 오픈소스 LMS (Silver Sponsor)</td><td>기관이 AI 공급자 선택: OpenAI · Azure AI · Ollama(로컬 LLM)</td><td>Moodle 5.0 AI 서브시스템: 작업별 모델 지정, AI 사용 리포트·정책 동의 절차</td><td>데이터 주권 중시 국가는 로컬 LLM 요구 → 모델 교체 가능 구조가 수출 조건</td></tr>
+          <tr><td>Kahoot!</td><td>기관 구매 후 교사 배포, 국내는 파트너사가 연수 대행</td><td>교사 1인 월 Go 무료 / Bronze $3 / Silver $7 / Gold $9 / One $19. 학교·교육청 라이선스는 견적</td><td>AI 기능을 입력 크기(PDF 쪽수)·출력 형식(모의시험 등)으로 티어 분리</td><td>AI 기능 단계별 티어 설계 방식을 자사 요금제에 참고</td></tr>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 03 MEETINGS ============ -->
+<section class="white" id="meetings">
+  <div class="wrap">
+    <div class="eyebrow">03 · Singapore Meetings</div>
+    <h2>싱가포르 주요 미팅</h2>
+    <p class="lead">유아교육 정책기관 · 운영사 및 사립 교육기관 미팅 결과 — ECDA · Skool4Kidz · Kinderland · Hanbridge Institute</p>
+
+    <div class="meeting" style="margin-top:36px">
+      <div>
+        <div class="mt-head"><span class="no">MEETING 1</span><h3>ECDA</h3><span class="muted">Early Childhood Development Agency</span></div>
+        <div class="callout">ECDA는 제품을 직접 구매하지 않으며 유치원 운영사(체인)가 도입을 결정하는 구조. IMDA 기술 승인 시 신규 지원금(도입 비용 30~50%)과 연계한 Kinderboard 도입이 가능하며, 5개 Anchor Operator 직접 공략을 권고받음</div>
+        <div class="dl">
+          <div><b>기관 개요</b><span>싱가포르 전체 유치원·어린이집을 관리하고 지원금을 집행하는 정부기관</span></div>
+          <div><b>구매 구조</b><span>ECDA는 구매 주체가 아니며, 각 유치원 운영사(체인)가 제품 선정 및 도입을 결정</span></div>
+          <div><b>지원금 연계</b><span>수업계획·포트폴리오 관련 신규 지원금으로 Kinderboard 도입 가능 (IMDA 기술 승인 후 비용 30~50% 지원)</span></div>
+          <div><b>접근 전략</b><span>최대 유치원 체인인 5개 Anchor Operator에 직접 접근할 것을 권고</span></div>
+          <div><b>시사점</b><span>운영사 단위 B2B 영업과 정부 지원금 연계가 핵심 진입 모델이며, IMDA 기술 승인 확보가 가격 경쟁력의 선결 조건</span></div>
+        </div>
+        <div class="table-wrap"><table class="status-table">
+          <tr><th>후속 조치</th><th>상태</th></tr>
+          <tr><td style="font-weight:400;white-space:normal">ECDA 감사 메일 및 제품 자료 송부</td><td><span class="st plan">발송 예정</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">지원금 신청 일정 및 IMDA 기술 승인 요건 확인</td><td><span class="st review">내부 검토</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">5개 Anchor Operator 리스트업 및 접촉 (Skool4Kidz 미팅 완료)</td><td><span class="st plan">예정</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">운영사별 Kinderboard 맞춤화 방안 수립</td><td><span class="st review">내부 검토</span></td></tr>
+        </table></div>
+      </div>
+      <img class="photo" src="assets/images/meet-ecda.jpg" alt="ECDA 미팅">
+    </div>
+
+    <div class="meeting">
+      <div>
+        <div class="mt-head"><span class="no">MEETING 2</span><h3>SKOOL4KIDZ</h3></div>
+        <div class="callout">ECDA가 권고한 Anchor Operator와 직접 접점을 확보. TRUETRUE 구매 관심(워런티 조건, MOQ 100대)을 확인했으며, 하드웨어(TRUETRUE) 선진입 후 Kinderboard로 확장하는 단계적 공략 가능성 확인</div>
+        <div class="dl">
+          <div><b>기관 개요</b><span>ECDA 지정 5개 Anchor Operator 중 하나(정부 지원으로 학비를 낮게 유지하는 대형 유치원 운영사) · 32개 센터, 약 6,000명 재원 · Kinderland와 유아교육 전문가 Dr. Jane Ching-Kwan 공동 설립</span></div>
+          <div><b>연결 경로</b><span>싱가포르 대표단 Timothy Chan(Skool4Kidz)의 소개로 미팅 성사</span></div>
+          <div><b>TRUETRUE</b><span>구매 관심 표명 — 워런티 조건 및 MOQ 100대 기준 문의</span></div>
+          <div><b>Kinderboard</b><span>수업계획·포트폴리오 관련 활용에 관심 표명</span></div>
+          <div><b>시사점</b><span>수량별 워런티 등 구매 조건의 신속한 제시가 전환 관건이며, TRUETRUE 납품 이력이 Kinderboard 확장의 교두보 역할</span></div>
+        </div>
+        <div class="table-wrap"><table class="status-table">
+          <tr><th>후속 조치</th><th>상태</th></tr>
+          <tr><td style="font-weight:400;white-space:normal">후속 메일 발송 (11/10)</td><td><span class="st ok">완료</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">TRUETRUE 샘플 피드백 수렴</td><td><span class="st wait">회신 대기</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">TRUETRUE 수량별 워런티 및 공급 조건 수립 (MOQ 100대 기준)</td><td><span class="st review">내부 검토</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">온라인 미팅 진행 (조건 제안 및 Kinderboard 소개)</td><td><span class="st plan">예정</span></td></tr>
+        </table></div>
+      </div>
+      <img class="photo" src="assets/images/meet-skool4kidz.jpg" alt="Skool4Kidz 미팅">
+    </div>
+
+    <div class="meeting">
+      <div>
+        <div class="mt-head"><span class="no">MEETING 3</span><h3>KINDERLAND</h3></div>
+        <div class="callout">Skool4Kidz 공동 설립사이자 아시아 120개 이상 센터를 운영하는 대형 유아교육 그룹과 접점 확보. 센터장에게 TRUETRUE 샘플을 직접 전달하고 Kinderboard 관심을 확인. 단일 센터 시범 운영 후 그룹 단위 확산을 목표로 추진</div>
+        <div class="dl">
+          <div><b>기관 개요</b><span>1978년 설립된 싱가포르 대표 유아교육 기업, 아시아 전역 120개 이상 센터 운영 · Crestar Education Group 소속 · Skool4Kidz 공동 설립사</span></div>
+          <div><b>연결 경로</b><span>Timothy Chan(Skool4Kidz)의 소개로 미팅 성사</span></div>
+          <div><b>TRUETRUE</b><span>센터장 Melissa Ang에게 샘플 직접 전달, 현장 사용 피드백 요청</span></div>
+          <div><b>Kinderboard</b><span>관심 표명 — Skool4Kidz와 그룹 관계로 양사 연계 제안 가능</span></div>
+          <div><b>시사점</b><span>Skool4Kidz와 병행 공략 시 그룹 차원의 의사결정과 연계 가능. 시범 운영 성과를 레퍼런스로 그룹 내 확산 추진</span></div>
+        </div>
+        <div class="table-wrap"><table class="status-table">
+          <tr><th>후속 조치</th><th>상태</th></tr>
+          <tr><td style="font-weight:400;white-space:normal">후속 메일 발송 (11/10)</td><td><span class="st ok">완료</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">TRUETRUE 샘플 피드백 수렴</td><td><span class="st wait">회신 대기</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">센터 시범 운영 제안 (운영 범위·기간·성과 지표 포함)</td><td><span class="st plan">예정</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">Skool4Kidz 연계 그룹 공동 제안 방안 검토</td><td><span class="st review">내부 검토</span></td></tr>
+        </table></div>
+      </div>
+      <img class="photo" src="assets/images/meet-kinderland.jpg" alt="Kinderland 미팅">
+    </div>
+
+    <div class="meeting">
+      <div>
+        <div class="mt-head"><span class="no">MEETING 4</span><h3>Hanbridge Institute</h3></div>
+        <div class="callout">LumiTeach에 대해 교사 업무 시간 절감 및 어휘 테스트 기능을 중심으로 긍정적 평가를 받았으며, Hanbridge 자체 교재 기반 PoC를 다음 단계로 추진하기로 함. ART BONBON은 부가 프로그램으로 검토 예정</div>
+        <div class="dl">
+          <div><b>기관 개요</b><span>2003년 설립된 싱가포르 사립 교육기관 · 주로 중국 출신 학생의 싱가포르 공립학교 입학 준비 과정 운영 · 영어·수학 중심 수업</span></div>
+          <div><b>LumiTeach</b><span>교사 수업 준비 시간 절감 효과와 학생 흥미를 높이는 어휘 테스트 기능에 호평</span></div>
+          <div><b>PoC 추진</b><span>Hanbridge 자체 교재를 활용한 시범 운영(PoC)을 다음 단계로 설정</span></div>
+          <div><b>ART BONBON</b><span>아동 미술 플랫폼을 정규 과정 외 부가 프로그램으로 검토</span></div>
+          <div><b>시사점</b><span>자체 교재 기반 PoC로 LumiTeach의 사립 교육기관 적용 레퍼런스 확보 기회. 교사 시간 절감 등 성과를 정량화해 확산 근거로 활용</span></div>
+        </div>
+        <div class="table-wrap"><table class="status-table">
+          <tr><th>후속 조치</th><th>상태</th></tr>
+          <tr><td style="font-weight:400;white-space:normal">후속 메일 발송 (11/10)</td><td><span class="st ok">완료</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">PoC 미팅 일정 조율</td><td><span class="st wait">회신 대기</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">요청 시 LumiTeach 체험 계정 제공</td><td><span class="st plan">발송 예정</span></td></tr>
+          <tr><td style="font-weight:400;white-space:normal">Hanbridge용 ART BONBON 부가 프로그램 구성 (아이스크림아트)</td><td><span class="st review">내부 검토</span></td></tr>
+        </table></div>
+      </div>
+      <img class="photo" src="assets/images/meet-hanbridge.jpg" alt="Hanbridge Institute 미팅">
+    </div>
+  </div>
+</section>
+
+<!-- ============ 04 SKETCH ============ -->
+<section class="dark" id="sketch">
+  <div class="wrap">
+    <div class="eyebrow">04 · Appendix · Field Sketch</div>
+    <h2>현장 스케치</h2>
+    <p class="lead">서비스별 제품 시연 · 상담 현장, 통합 브랜드 부스 전경과 현장 이벤트.</p>
+    <div class="sketch-group">
+      <h3>Kinderboard · TRUETRUE</h3>
+      <div class="photo-grid" style="margin-top:12px"><img src="assets/images/demo-01.jpg" alt="Kinderboard 시연"><img src="assets/images/demo-02.jpg" alt="TRUETRUE 시연"><img src="assets/images/demo-03.jpg" alt="Kinderboard 상담"></div>
+      <h3>LumiTeach</h3>
+      <div class="photo-grid" style="margin-top:12px"><img src="assets/images/demo-04.jpg" alt="LumiTeach 시연"><img src="assets/images/demo-05.jpg" alt="LumiTeach 상담"><img src="assets/images/demo-06.jpg" alt="LumiTeach 부스 방문객"></div>
+      <h3>ART BONBON</h3>
+      <div class="photo-grid" style="margin-top:12px"><img src="assets/images/demo-07.jpg" alt="ART BONBON 시연"><img src="assets/images/demo-08.jpg" alt="ART BONBON 상담"><img src="assets/images/demo-09.jpg" alt="ART BONBON 체험"></div>
+      <h3>부스 전경</h3>
+      <div class="photo-grid five" style="margin-top:12px"><img src="assets/images/booth-01.jpg" alt="부스 전경 1"><img src="assets/images/booth-02.jpg" alt="부스 전경 2"><img src="assets/images/booth-03.jpg" alt="부스 전경 3"><img src="assets/images/booth-04.jpg" alt="부스 전경 4"><img src="assets/images/booth-05.jpg" alt="부스 전경 5"></div>
+      <h3>현장 이벤트 · 단체 사진</h3>
+      <div class="photo-grid four" style="margin-top:12px"><img class="land" src="assets/images/booth-06.jpg" alt="현장 이벤트"><img class="land" src="assets/images/booth-07.jpg" alt="Pick Your Favorite 투표판"><img class="land" src="assets/images/booth-08.jpg" alt="부스 방문객"><img class="land" src="assets/images/booth-09.jpg" alt="참가단 단체 사진"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ VIDEOS ============ -->
+<section class="video-section" id="videos">
+  <div class="wrap">
+    <div class="eyebrow">Field Videos</div>
+    <h2>현장 영상</h2>
+    <p class="lead">영상은 <b>videos.js</b>에서 자유롭게 추가·삭제·순서 변경할 수 있습니다. 우측 상단 <b>영상 관리</b>는 발표 전에 임시로 영상을 테스트하는 용도입니다.</p>
+    <div id="videoGrid" class="video-grid"></div>
+  </div>
+</section>
+
+<section class="thanks" style="min-height:60vh">
+  <div class="wrap" style="text-align:center">
+    <div class="logo-chip"><img src="assets/images/edutech-logo.png" alt="EDUtech Asia 로고"></div>
+    <h2 style="margin-top:10px">감사합니다.</h2>
+    <p class="lead" style="margin:0 auto">아이스크림미디어 해외사업실</p>
+  </div>
+</section>
+
+<footer class="footer"><div class="wrap">EDUtech Asia 2026 전시회 참가 결과 보고 · i-Scream media Global Business Division</div></footer>
+
+<div class="controls"><button class="ctrl" id="prevSection" type="button" aria-label="이전 섹션">↑</button><button class="ctrl" id="nextSection" type="button" aria-label="다음 섹션">↓</button></div>
+
+<div class="lightbox" id="lightbox"><img alt=""></div>
+
+<aside class="editor" id="editor">
+  <h3>영상 임시 관리</h3>
+  <p>여기서 추가한 영상은 현재 브라우저 세션에서만 보입니다. GitHub에 영구 반영하려면 <b>assets/videos</b>에 파일을 넣고 <b>videos.js</b>를 수정하세요.</p>
+  <label>영상 파일 선택</label><input type="file" id="localVideo" accept="video/*">
+  <label>영상 제목</label><input type="text" id="localTitle" placeholder="예: Kinderboard 부스 시연">
+  <div class="row"><button class="primary" id="addLocal" type="button">현재 세션에 추가</button><button class="secondary" id="clearLocal" type="button">임시 영상 삭제</button></div>
+  <div class="temp-list" id="tempList"></div>
+</aside>
+
+<script src="videos.js"></script>
+<script>
+(function(){
+  /* ---------- 차트 데이터 (숫자만 바꾸면 그래프가 자동으로 바뀝니다) ---------- */
+  const DAILY=[["사전 (10/21~11/1)",23],["11/4 (수)",268],["11/5 (목)",281]];
+  const CHARTS={
+    country:[["싱가포르",243],["말레이시아",124],["인도네시아",43],["필리핀",39],["인도",17],["베트남",13],["홍콩",10],["중국",9],["태국",8],["기타 15개국",30,1]],
+    job:[["교사·강사",100],["경영진·리더십",58],["교육 책임자",54],["학생",35],["행정·운영",30],["영업·사업개발",26],["컨설턴트",26],["IT·기술",21],["마케팅",15],["정부·공공",9],["기타",63,1],["미기재",99,1]],
+    industry:[["K-12 학교",132],["에듀테크 기업",94],["대학·고등교육",67],["정부·공공기관",53],["유통·컨설팅",33],["직업·비즈니스스쿨",33],["학원·교육센터",27],["학생",27],["유아교육",26],["기타(투자자 등)",6,1],["미기재",38,1]]
+  };
+  document.querySelectorAll('[data-chart]').forEach(el=>{
+    const data=CHARTS[el.dataset.chart]; const max=Math.max(...data.map(d=>d[1]));
+    el.innerHTML=data.map(([l,v,dim])=>`<div class="bar-row${dim?' dim':''}"><span class="lbl" title="${l}">${l}</span><span class="bar-track"><span class="bar-fill" data-w="${v/max*100}"></span></span><span class="val">${v}</span></div>`).join('');
+  });
+  const dmax=Math.max(...DAILY.map(d=>d[1]));
+  document.getElementById('dailyBars').innerHTML=DAILY.map(([l,v])=>`<div class="vbar"><span class="n">${v}</span><span class="col" data-h="${v/dmax*86}"></span></div>`).join('');
+  document.getElementById('dailyLabels').innerHTML=DAILY.map(([l])=>`<div>${l}</div>`).join('');
+
+  /* 화면에 보일 때 그래프 애니메이션 */
+  const grow=root=>{
+    root.querySelectorAll('.bar-fill').forEach(b=>b.style.width=b.dataset.w+'%');
+    root.querySelectorAll('.col').forEach(b=>b.style.height=b.dataset.h+'%');
+  };
+  if('IntersectionObserver' in window){
+    const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){grow(e.target);io.unobserve(e.target)}}),{threshold:.2});
+    document.querySelectorAll('.chart').forEach(c=>io.observe(c));
+  } else grow(document);
+
+  /* ---------- 영상 ---------- */
+  const videoGrid=document.getElementById('videoGrid');
+  const localVideos=[];
+  const configured=(typeof VIDEO_CONFIG!=='undefined')?VIDEO_CONFIG:[];
+  const renderVideos=()=>{
+    const all=[...configured,...localVideos];
+    videoGrid.innerHTML='';
+    if(!all.length){
+      videoGrid.innerHTML='<div class="empty-video">아직 영상이 없습니다.<br><b>assets/videos</b>에 MP4를 넣고 <b>videos.js</b>만 수정하면 자동으로 여기에 표시됩니다.</div>';
+      return;
+    }
+    all.forEach((item,idx)=>{
+      const card=document.createElement('article'); card.className='video-card';
+      const v=document.createElement('video'); v.controls=true; v.playsInline=true; v.preload='metadata'; v.src=item.src; if(item.poster) v.poster=item.poster;
+      const meta=document.createElement('div'); meta.className='video-meta'; meta.textContent=item.title||('현장 영상 '+(idx+1));
+      card.append(v,meta); videoGrid.append(card);
+    });
+  };
+  renderVideos();
+
+  const editor=document.getElementById('editor');
+  document.getElementById('editToggle').addEventListener('click',()=>editor.classList.toggle('open'));
+  const tempList=document.getElementById('tempList');
+  const renderTemp=()=>{tempList.innerHTML='';localVideos.forEach((v,i)=>{const el=document.createElement('div');el.className='temp-item';el.textContent=(i+1)+'. '+v.title;tempList.append(el);});};
+  document.getElementById('addLocal').addEventListener('click',()=>{
+    const file=document.getElementById('localVideo').files[0];
+    if(!file){alert('영상 파일을 먼저 선택하세요.');return}
+    const title=document.getElementById('localTitle').value.trim()||file.name;
+    localVideos.push({title,src:URL.createObjectURL(file)});
+    document.getElementById('localTitle').value='';document.getElementById('localVideo').value='';
+    renderTemp();renderVideos();
+  });
+  document.getElementById('clearLocal').addEventListener('click',()=>{localVideos.splice(0,localVideos.length);renderTemp();renderVideos();});
+
+  /* ---------- 사진 크게 보기 (영상 포스터로 지정된 사진은 제외) ---------- */
+  const lb=document.getElementById('lightbox'), lbImg=lb.querySelector('img');
+  document.addEventListener('click',e=>{
+    const img=e.target.closest('main img, section img');
+    if(!img||img.closest('.logo-chip')||img.closest('.logo-strip')||img.dataset.videoReady) return;
+    lbImg.src=img.src; lbImg.alt=img.alt; lb.classList.add('open');
+  });
+  lb.addEventListener('click',()=>lb.classList.remove('open'));
+
+  /* ---------- 섹션 이동 ---------- */
+  const sections=[...document.querySelectorAll('section')];
+  const go=(dir)=>{
+    let best=0,dist=Infinity;
+    sections.forEach((s,i)=>{const d=Math.abs(s.getBoundingClientRect().top);if(d<dist){dist=d;best=i}});
+    const next=Math.max(0,Math.min(sections.length-1,best+dir));sections[next].scrollIntoView({behavior:'smooth',block:'start'});
+  };
+  document.getElementById('prevSection').addEventListener('click',()=>go(-1));
+  document.getElementById('nextSection').addEventListener('click',()=>go(1));
+  window.addEventListener('keydown',e=>{
+    if(['INPUT','TEXTAREA'].includes(document.activeElement.tagName))return;
+    if(e.key==='Escape') lb.classList.remove('open');
+    if(e.key==='ArrowDown'||e.key==='PageDown'){e.preventDefault();go(1)}
+    if(e.key==='ArrowUp'||e.key==='PageUp'){e.preventDefault();go(-1)}
+    if(e.key.toLowerCase()==='e') editor.classList.toggle('open');
+  });
+})();
+</script>
+</body>
+</html>
